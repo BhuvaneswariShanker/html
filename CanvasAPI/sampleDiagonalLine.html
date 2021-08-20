@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function drawDiagonal_NotRecommended(){
+	var canvas= document.getElementById('diagonal');
+	var context=canvas.getContext('2d');
+	
+	// Create a path in absolute coordinates
+	context.beginPath();
+	content.moveTo(70, 140);
+	content.lineTo(140, 70);
+	
+	// Stroke the line onto the canvas
+	context.stroke();
+}
+
+// Use of transformation is considered to be the best practise for more complex canvas operations
+// Doing transformation, just to adjust the orgin of any operations should be starting with (0,0)
+function drawDiagonal(){
+	var canvas= document.getElementById('diagonal');
+	var context=canvas.getContext('2d');
+
+	// Save copy of the curret drawing state 
+	context.save();
+
+	// Move the drawing context to the right, and down 
+	context.translate(70,140);
+
+	// Draw the same line as before, but using the origin as a start
+	context.beginPath();
+	context.moveTo(0,0);
+	context.lineTo(70,-70);
+	context.stroke();
+
+	//Restore the old drawing state 
+	context.restore();
+
+}
+
+window.addEventListener("load", drawDiagonal, true);
+
+</script>
+<body>
+<canvas id="diagonal">
+</canvas>
+</body>
+</html>
