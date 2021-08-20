@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> HTML5 </title>
+<link href="html5.css" rel="stylesheet"/>
+</head>
+<script>
+function operations(){
+var x = document.querySelector(".highClass"); // Returns first element in the document which matches the specified rule or rules
+var y = document.querySelectorAll("header"); // Returns all element in the document which matches the specified rule or rules
+var z = document.querySelector(".highClass",".lowClass"); // Returns first element in the document with the class highClass or the class lowClass
+alert(x);
+alert(y);
+alert(z);
+}
+</script>
+<body>
+<header>
+<h1>Header</h1>
+<h2>Subtitle</h2>
+<h4>HTML 5 Rocks!</h4>
+</header>
+
+<div id="container">
+<nav id="nav" class="highClass">
+<h3>Nav</h3>
+<a href="http://www.example.com">Link 1</a>
+<a id="link1" class="lowClass" href="http://www.example.com">Link 2</a>
+<a href="http://www.example.com">Link 3</a>
+</nav>
+
+<section>
+<button onclick="operations()"> Click me </button>
+<article>
+<header>
+<h1>Article Header</h1>
+</header>
+<p> Lorem ipsum dolor HTML5 nunc aut nunquam sit amet, consectetur adip[iscing elit. Vivamus at est eros, vel fringilla urna.</p>
+<p> Per inceptos himeaneos.Quisque feugiat, justo at vehicula pellentesquem turpis lorem dictum nunc.</p>
+<footer>
+<h2>Article Footer</h2>
+</footer>
+</article>
+
+<article>
+<header>
+<h1>Article Header</h1>
+</header>
+<p>
+HTML5: "Lorem ipsum dolor nunc aut nunquam sit amet, consectetur adipiscingelit. vivamus at est eros, vel friengilla irna. Pellentesque odio
+</p>
+<footer>
+<h2>Article footer</h2>
+</footer>
+</article>
+
+</section>
+<aside>
+<h3>Aside</h3>
+<p>HTML5: "Lorem ipsum dolor nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna. Pellentesque odio rhoncus
+</p>
+</aside>
+<footer>
+<h2>Footer</h2>
+</footer>
+</div>
+</body>
+</html>
