@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function loadVideo(){
+            var video = document.createElement('video');             
+            video.height = 500;
+            video.width = 500;
+            video.controls = true;
+            video.src = "video.ogg";  
+            var hasVideo = !!video.s; 
+            alert(hasVideo);
+            if(hasVideo){              
+                document.getElementById("mainContent").appendChild(video);
+            }else{
+                alert('Browser doesnt support HTML5 video');
+            }
+        }
+        window.addEventListener("load", loadVideo, true);
+    </script>
+   <body>
+    <!-- <video src="video.ogg" controls> 
+        Your browser does not support HTML5 video. 
+       </video> -->
+
+       <!-- <video src="video.ogg"> 
+        <object data="videoplayer.swf" type="application/x-shockwave-flash"> 
+        <param name="movie" value="video.swf"/> 
+        </object> 
+       </video> -->
+       <div id="mainContent">
+       </div>
+   </body>
+</html>
