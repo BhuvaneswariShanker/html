@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function loadDemo() { 
+            if(navigator.geolocation) { 
+                document.getElementById("support").innerHTML = "HTML5 Geolocation supported.";                 
+            } else { 
+                document.getElementById("support").innerHTML = "HTML5 Geolocation is not supported in your browser."; 
+            } 
+        }
+        window.addEventListener("load", loadDemo, true);
+    </script>
+    <body>
+        <div id="support"></div>
+    </body>
+</html>
