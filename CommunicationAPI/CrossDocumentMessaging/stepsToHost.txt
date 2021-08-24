@@ -1,0 +1,17 @@
+1. Update the path to the Windows hosts file (C:\Windows\system32\drivers\etc\hosts) and 
+the Linux version (/etc/hosts) by adding two entries pointing to your localhost (IP address 
+127.0.0.1), as shown in the following example: 
+    127.0.0.1 chat.example.net 
+    127.0.0.1 portal.example.com 
+    ■ Note You must restart your browser after modifying the host file to ensure that the DNS entries take effect. 
+2. Install Python, which includes the lightweight SimpleHTTPServer web server. 
+3. Navigate to the directory that contains the two example files 
+    (postMessageParent.html and postMessageWidget.html). 
+4. Start Python as follows: 
+    python -m SimpleHTTPServer 9999 // python 2
+    python -m http.server 9999      // python 3
+5. Open a browser and navigate to 
+    http://portal.example.com:9999/postMessagePortal.html. 
+
+■ Note To check origin, you can select the iframe/element and run the below command in console
+    window.origin
